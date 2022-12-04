@@ -1,17 +1,17 @@
 const PushAPI  = require("@pushprotocol/restapi");
 const ethers = require('ethers');
-let privateKey = "0x0781dd28de579c455ad3f90b69069954d7ad554fcc4784541f80d544fa211e09"
+let privateKey = "0x103327ad9c2def34978b8cd80b23ac8429186a4ddf4843fa1f2e26f32693d0a5"
 const signer = new ethers.Wallet(privateKey);
 const DAOAddress = "0x856f773544be3b1fb70ce3847Bd07c68e44702b3";
 let provider = new ethers.providers.JsonRpcProvider("https://eth-goerli.public.blastapi.io");
 //  const user =  await PushAPI.user.get({
-//     account: '0xc00ac4f9ef9f6C2c0Fad92e25A204D51fFD7C998', // user address in CAIP
+//     account: '0x46E9EF011d0398eC08102C98669da6bE1f6a586e', // user address in CAIP
 //     env: 'staging'
 //   })
 
 
 // const userCreated =  await PushAPI.user.create({
-//     account: '0xc00ac4f9ef9f6C2c0Fad92e25A204D51fFD7C998',
+//     account: '0x46E9EF011d0398eC08102C98669da6bE1f6a586e',
 //     env: 'staging',
 
 // })
@@ -68,7 +68,7 @@ let ABI = [
 
 async function tester() {
     const notifications = await PushAPI.user.getFeeds({
-        user: 'eip155:5:0xc00ac4f9ef9f6C2c0Fad92e25A204D51fFD7C998', // user address in CAIP
+        user: 'eip155:5:0x46E9EF011d0398eC08102C98669da6bE1f6a586e', // user address in CAIP
         env: 'staging'
       });
     
@@ -86,6 +86,7 @@ async function tester() {
             }
         }
         if (isMember) {
+            
 
       const apiResponse = await PushAPI.payloads.sendNotification({
         signer,
@@ -102,7 +103,7 @@ async function tester() {
         recipients: daomembers.map((member) => {
             return "eip155:5:" + member;
         }),
-        channel : "eip155:5:0xc00ac4f9ef9f6C2c0Fad92e25A204D51fFD7C998",
+        channel : "eip155:5:0x46E9EF011d0398eC08102C98669da6bE1f6a586e",
         env: 'staging'
       })
     }
