@@ -1,0 +1,19 @@
+{
+  "name": "nodeapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@pushprotocol/restapi": "^0.2.2",
+    "ethereumjs-util": "^7.1.5",
+    "ethers": "^5.7.2",
+    "open": "^8.4.0",
+    "opener": "^1.5.2"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "ethindia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.7.3",
+    "@openzeppelin/contracts-upgradeable": "^4.7.3",
+    "@superfluid-finance/ethereum-contracts": "^1.4.2",
+    "@truffle/hdwallet-provider": "^2.0.14",
+    "truffle-contract-size": "^2.0.1",
+    "truffle-flattener": "^1.5.0"
+  },
+  "devDependencies": {
+    "@openzeppelin/truffle-upgrades": "^1.16.0",
+    "eth-gas-reporter": "^0.2.22",
+    "prettier": "^2.4.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.18",
+    "solhint": "^3.3.6",
+    "solhint-plugin-prettier": "0.0.5",
+    "solidity-coverage": "^0.8.0",
+    "web3": "1.5.2"
+  }
+}
